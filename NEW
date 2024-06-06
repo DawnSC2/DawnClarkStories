@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Chronicles of the Few</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0d0d0d;
+            color: #ffffff;
+        }
+        header {
+            background-color: #000000;
+            color: #e0e0e0;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #1a1a1a;
+            padding: 10px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: #f0f0f0;
+            text-decoration: none;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: #262626;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        footer {
+            background-color: #000000;
+            color: #e0e0e0;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .book-cover {
+            text-align: center;
+        }
+        .book-cover img {
+            width: 200px;
+        }
+        .purchase-buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .purchase-buttons a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #ff6f61;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .purchase-buttons a:hover {
+            background-color: #ff3f31;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>The Chronicles of the Few</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#book">My Book</a></li>
+            <li><a href="#signup">Email Sign-Up</a></li>
+            <li><a href="#characters">Character Bios</a></li>
+            <li><a href="#vote">Vote for Stories</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#blog">Blog</a></li>
+        </ul>
+    </nav>
+    <section id="book">
+        <h2>My Book</h2>
+        <div class="book-cover">
+            <img src="images/ebook-cover.jpg" alt="Book Cover">
+        </div>
+        <p>Here you can write a brief description of your book, its plot, and why people should read it.</p>
+        <div class="purchase-buttons">
+            <a href="https://www.amazon.com/yourbooklink" target="_blank">Buy on Amazon</a>
+            <a href="https://www.barnesandnoble.com/yourbooklink" target="_blank">Buy on Barnes & Noble</a>
+            <a href="yourwebsite-purchase-page.html">Buy Directly</a>
+        </div>
+    </section>
+    <section id="signup">
+        <h2>Sign Up for Monthly Creative Stories</h2>
+        <form action="subscribe.php" method="post">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit">Sign Up</button>
+        </form>
+        <p>Sign up and receive a free short story as a welcome gift!</p>
+    </section>
+    <section id="characters">
+        <h2>Character Bios</h2>
+        <div class="character-bio">
+            <img src="images/character.png" alt="Lord Gresham">
+            <div>
+                <h3>Lord Gresham</h3>
+                <p>Lord Gresham is a key character in the Chronicles of the Few. He is known for his...</p>
+            </div>
+        </div>
+        <!-- Add more character bios as needed -->
+    </section>
+    <section id="vote">
+        <h2>Vote for Next Month's Stories</h2>
+        <form action="vote.php" method="post">
+            <label for="story1">Story 1</label>
+            <input type="radio" id="story1" name="story" value="story1">
+            <label for="story2">Story 2</label>
+            <input type="radio" id="story2" name="story" value="story2">
+            <!-- Add more options as needed -->
+            <button type="submit">Vote</button>
+        </form>
+    </section>
+    <section id="testimonials">
+        <h2>Testimonials</h2>
+        <div class="testimonial">
+            <p>"This book is a masterpiece!" - Reader A</p>
+        </div>
+        <div class="testimonial">
+            <p>"An enthralling read from start to finish." - Reader B</p>
+        </div>
+        <!-- Add more testimonials as needed -->
+    </section>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form action="contact.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    <section id="blog">
+        <h2>Blog</h2>
+        <!-- Example of a blog post preview -->
+        <article>
+            <h3>Post Title</h3>
+            <p>Preview of the blog post content...</p>
+            <a href="full-post.html">Read More</a>
+        </article>
+        <!-- Add more blog post previews as needed -->
+    </section>
+    <footer>
+        <p>&copy; 2024 Dawn Clark. All rights reserved.</p>
+        <p>Follow me on <a href="https://twitter.com/yourprofile">Twitter</a>, <a href="https://facebook.com/yourprofile">Facebook</a>, <a href="https://instagram.com/yourprofile">Instagram</a></p>
+    </footer>
+
+    <!-- PayPal Button -->
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="YOUR_BUTTON_ID">
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+    </form>
+</body>
+</html>
