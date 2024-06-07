@@ -138,7 +138,20 @@
                 <p>Lord Gresham’s strategic mind and unyielding will have led his people through countless trials. Despite his stoic exterior, he found an unexpected friend in Commander Alexander Levi. Modeled after a knight, Gresham is dedicated to eradicating evil and supporting the Galactic Alliance's mission to prevent chaos. His heart belongs to Lady Mara, a fellow member of The FEW, sharing a deep bond that transcends their duties.</p>
             </div>
         </div>
-        <!-- Add more character bios as needed -->
+        <div class="character-bio">
+            <img src="images/lady-mara-placeholder.png" alt="Lady Mara">
+            <div>
+                <h3>Lady Mara</h3>
+                <p>Placeholder description for Lady Mara. Add detailed bio and image when available.</p>
+            </div>
+        </div>
+        <div class="character-bio">
+            <img src="images/commander-levi-updated.png" alt="Commander Levi">
+            <div>
+                <h3>Commander Levi</h3>
+                <p>Commander Levi wears a space military suit that is dark blue with white and silver markings. He has light brown hair and green eyes. Known for his friendly and charismatic nature, Levi knows every crew member's name and strengths. He works effortlessly with anyone, ensuring to bond with his crew. They respect and genuinely like him. Modeled after the first Captain America movie, Levi is friendly, willing to help and aid anyone, kind, yet stern in his beliefs. His leadership and dedication make him a beloved figure among his peers.</p>
+            </div>
+        </div>
     </section>
     <section id="vote">
         <h2>Vote for Next Month's Stories</h2>
