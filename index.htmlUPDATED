@@ -64,10 +64,6 @@
         .book-cover img {
             width: 200px;
         }
-        .book-trailer {
-            text-align: center;
-            margin-top: 20px;
-        }
         .sample-chapter {
             text-align: center;
             margin-top: 20px;
@@ -109,13 +105,6 @@
             <img src="images/ebook-cover.jpg" alt="Book Cover">
         </div>
         <p>Explore the epic journey of "The Chronicles of the Few," where thrilling battles, intricate betrayals, and profound love come together in a breathtaking space opera.</p>
-        <div class="book-trailer">
-            <h3>Watch the Book Trailer</h3>
-            <video width="320" height="240" controls>
-                <source src="book-trailer.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
         <div class="sample-chapter">
             <h3>Read a Sample Chapter</h3>
             <p><a href="sample-chapter.pdf" download>Download Sample Chapter</a></p>
