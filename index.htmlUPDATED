@@ -50,6 +50,14 @@
             width: 100%;
             bottom: 0;
         }
+        footer a {
+            color: #e0e0e0;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            color: #ff6f61;
+        }
         .book-cover {
             text-align: center;
         }
@@ -156,7 +164,11 @@
     </section>
     <footer>
         <p>&copy; 2024 Dawn Clark. All rights reserved.</p>
-        <p>Follow me on <a href="https://twitter.com/yourprofile">Twitter</a>, <a href="https://facebook.com/yourprofile">Facebook</a>, <a href="https://instagram.com/yourprofile">Instagram</a></p>
+        <p>Follow me on 
+            <a href="https://www.facebook.com/dawn.clark.52438" target="_blank">Facebook</a>, 
+            <a href="https://x.com/ClarkDawns" target="_blank">Twitter</a>, 
+            <a href="https://www.instagram.com/clarkdaw2/" target="_blank">Instagram</a>
+        </p>
     </footer>
 </body>
 </html>
