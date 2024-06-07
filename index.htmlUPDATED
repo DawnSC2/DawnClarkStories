@@ -7,17 +7,17 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #0d0d0d;
-            color: #ffffff;
+            background-color: #0d0d0d; /* Blackness of space */
+            color: #e0e0e0; /* Silver text */
         }
         header {
-            background-color: #000000;
-            color: #e0e0e0;
+            background-color: #1a1a1a; /* Very dark grey */
+            color: #e0e0e0; /* Silver text */
             padding: 20px;
             text-align: center;
         }
         nav {
-            background-color: #1a1a1a;
+            background-color: #2b2b2b; /* Dark grey */
             padding: 10px;
         }
         nav ul {
@@ -31,19 +31,22 @@
             margin: 0 10px;
         }
         nav ul li a {
-            color: #f0f0f0;
+            color: #a0a0ff; /* Light purple */
             text-decoration: none;
+        }
+        nav ul li a:hover {
+            color: #5c5cff; /* Bright purple */
         }
         section {
             padding: 20px;
             margin: 20px;
-            background-color: #262626;
+            background-color: #262626; /* Dark grey */
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
         footer {
-            background-color: #000000;
-            color: #e0e0e0;
+            background-color: #1a1a1a; /* Very dark grey */
+            color: #e0e0e0; /* Silver text */
             text-align: center;
             padding: 10px;
             position: fixed;
@@ -51,12 +54,12 @@
             bottom: 0;
         }
         footer a {
-            color: #e0e0e0;
+            color: #a0a0ff; /* Light purple */
             text-decoration: none;
             margin: 0 10px;
         }
         footer a:hover {
-            color: #ff6f61;
+            color: #5c5cff; /* Bright purple */
         }
         .book-cover {
             text-align: center;
@@ -69,7 +72,7 @@
             margin-top: 20px;
         }
         .testimonial {
-            background-color: #333333;
+            background-color: #333333; /* Dark grey */
             padding: 10px;
             margin: 10px 0;
             border-radius: 8px;
@@ -102,7 +105,7 @@
     <section id="book">
         <h2>My Book</h2>
         <div class="book-cover">
-            <img src="images/ebook-cover.jpg" alt="Book Cover">
+            <img src="ebook cover.jpg" alt="Book Cover">
         </div>
         <p>Explore the epic journey of "The Chronicles of the Few," where thrilling battles, intricate betrayals, and profound love come together in a breathtaking space opera.</p>
         <div class="sample-chapter">
