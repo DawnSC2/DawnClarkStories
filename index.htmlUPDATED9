@@ -140,8 +140,7 @@
     </section>
     <section id="characters">
         <h2>Character Bios</h2>
-        <div class="character-bio">
-            <img src="images/lord-gresham.png" alt="Lord Gresham">
+           <img src="image.png" alt="Lord Gresham">
             <div>
                 <h3>Lord Gresham</h3>
                 <p>Lord Gresham, one of The FEW, commands awe and fear throughout the galaxy. With dark hair and ocean-blue eyes that turn black during intense emotions, he is a formidable figure. His all-black uniform, devoid of decoration, features the glowing emblem of The FEW, and his dark red cape mirrors his emotional state, billowing and snapping without wind.</p>
