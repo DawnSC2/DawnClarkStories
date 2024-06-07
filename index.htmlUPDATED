@@ -54,12 +54,12 @@
             bottom: 0;
         }
         footer a {
-            color: #a0a0ff; /* Light purple */
+            color: #e0e0e0; /* Silver text */
             text-decoration: none;
             margin: 0 10px;
         }
         footer a:hover {
-            color: #5c5cff; /* Bright purple */
+            color: #ff6f61; /* Highlight color */
         }
         .book-cover {
             text-align: center;
@@ -107,7 +107,7 @@
         <div class="book-cover">
             <img src="ebook cover.jpg" alt="Book Cover">
         </div>
-        <p>Explore the epic journey of "The Chronicles of the Few," where thrilling battles, intricate betrayals, and profound love come together in a breathtaking space opera.</p>
+        <p>"The Chronicles of the Few" is an epic space opera filled with thrilling battles, intricate betrayals, and profound love. Follow Lord Gresham, Lady Mara, and Commander Levi as they navigate a galaxy on the brink of chaos, where every decision could mean the difference between peace and war. With a perfect blend of action, romance, and a touch of comedy, this saga will keep you on the edge of your seat until the final, explosive showdown.</p>
         <div class="sample-chapter">
             <h3>Read a Sample Chapter</h3>
             <p><a href="sample-chapter.pdf" download>Download Sample Chapter</a></p>
@@ -125,10 +125,12 @@
     <section id="characters">
         <h2>Character Bios</h2>
         <div class="character-bio">
-            <img src="images/character.png" alt="Lord Gresham">
+            <img src="images/lord-gresham.png" alt="Lord Gresham">
             <div>
                 <h3>Lord Gresham</h3>
-                <p>Lord Gresham is a formidable and stoic leader, commanding respect and fear throughout the galaxy. His strategic mind and unyielding will have led his people through countless trials.</p>
+                <p>Lord Gresham, one of The FEW, commands awe and fear throughout the galaxy. With dark hair and ocean-blue eyes that turn black during intense emotions, he is a formidable figure. His all-black uniform, devoid of decoration, features the glowing emblem of The FEW, and his dark red cape mirrors his emotional state, billowing and snapping without wind.</p>
+                <p>At his side, he carries a sword inscribed with ancient runes that glow ominously, capable of acting as both weapon and shield. Though not an officer, he works closely with the Galactic Alliance, who are honored by his presence. The FEW, a group so rare that many never encounter them, wield immense power, capable of manipulating the atmosphere and creating weather phenomena with ease.</p>
+                <p>Lord Gresham’s strategic mind and unyielding will have led his people through countless trials. Despite his stoic exterior, he found an unexpected friend in Commander Alexander Levi. Modeled after a knight, Gresham is dedicated to eradicating evil and supporting the Galactic Alliance's mission to prevent chaos. His heart belongs to Lady Mara, a fellow member of The FEW, sharing a deep bond that transcends their duties.</p>
             </div>
         </div>
         <!-- Add more character bios as needed -->
