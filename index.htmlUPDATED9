@@ -2,91 +2,9 @@
 <html>
 <head>
     <title>The Chronicles of the Few</title>
+    <meta charset="UTF-8">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #0d0d0d; /* Blackness of space */
-            color: #e0e0e0; /* Silver text */
-        }
-        header {
-            background-color: #000033; /* Dark blue */
-            color: #e0e0e0; /* Silver text */
-            padding: 20px;
-            text-align: center;
-        }
-        nav {
-            background-color: #2e003e; /* Dark purple */
-            padding: 10px;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            text-align: center;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 10px;
-        }
-        nav ul li a {
-            color: #c0c0ff; /* Light silver with a hint of purple */
-            text-decoration: none;
-        }
-        nav ul li a:hover {
-            color: #ffccff; /* Bright silver with a hint of purple */
-        }
-        section {
-            padding: 20px;
-            margin: 20px;
-            background-color: #1a0033; /* Very dark purple */
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        }
-        footer {
-            background-color: #000033; /* Dark blue */
-            color: #e0e0e0; /* Silver text */
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-        footer a {
-            color: #e0e0e0; /* Silver text */
-            text-decoration: none;
-            margin: 0 10px;
-        }
-        footer a:hover {
-            color: #ff6f61; /* Highlight color */
-        }
-        .book-cover {
-            text-align: center;
-        }
-        .book-cover img {
-            width: 200px;
-        }
-        .sample-chapter {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .testimonial {
-            background-color: #4b0066; /* Dark purple */
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 8px;
-        }
-        .character-bio {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        .character-bio img {
-            width: 150px;
-            border-radius: 8px;
-            margin-right: 20px;
-        }
+        /* Add your CSS here */
     </style>
 </head>
 <body>
@@ -105,7 +23,7 @@
     <section id="book">
         <h2>The Chronicles of the Few: A Saga Forged in Starlight</h2>
         <div class="book-cover">
-            <img src="ebook-cover.jpg" alt="Book Cover">
+            <img src="images/ebook-cover.jpg" alt="Book Cover">
         </div>
         <p>The cosmos trembles on the precipice of oblivion. A galactic empire crumbles, ravaged by treachery and whispers of a coming storm. Enter The Chronicles of the Few, a legend etched in the fires of a thousand battles.</p>
         <p>Lord Gresham, a titan cloaked in stoicism, wields power both ancient and awesome. He is one of the FEW, enigmatic beings whose very existence holds the key to galactic salvation.</p>
@@ -137,10 +55,10 @@
         </form>
         <p>Sign up and receive a free short story as a welcome gift!</p>
     </section>
- <section id="characters">
+    <section id="characters">
         <h2>Character Bios</h2>
         <div class="character-bio">
-            <img src="image.png" alt="Lord Gresham">
+            <img src="images/lordgresham.png" alt="Lord Gresham">
             <div>
                 <h3>Lord Gresham</h3>
                 <p>Lord Gresham, one of The FEW, commands awe and fear throughout the galaxy. With dark hair and ocean-blue eyes that turn black during intense emotions, he is a formidable figure. His all-black uniform, devoid of decoration, features the glowing emblem of The FEW, and his dark red cape mirrors his emotional state, billowing and snapping without wind.</p>
@@ -149,7 +67,7 @@
             </div>
         </div>
         <div class="character-bio">
-            <img src="LadyMara.png" alt="Lady Mara">
+            <img src="images/ladymara.png" alt="Lady Mara">
             <div>
                 <h3>Lady Mara</h3>
                 <p>Lady Mara, with her lush blonde hair and violet eyes that darken with emotion, is a diplomatic force within The FEW. She wears the same all-black uniform with the glowing emblem, and her dark red cape reacts to her feelings. Her blue-glowing sword with ancient runes symbolizes her power and authority.</p>
@@ -157,10 +75,9 @@
             </div>
         </div>
         <div class="character-bio">
-            <img src="commander-levi-updated.png" alt="Commander Levi">
+            <img src="images/commanderlevi.png" alt="Commander Levi">
             <div>
-                <h3>
- <h3>Commander Levi</h3>
+                <h3>Commander Levi</h3>
                 <p>Commander Levi wears a space military suit that is dark blue with white and silver markings. He has light brown hair and green eyes. Friendly and charismatic, he knows every crew member's name and strengths. He can work with anyone and makes sure to bond with his crew, earning their respect and admiration. Modeled after a knight, Levi is friendly, kind, and always willing to help, yet stern in his beliefs. His strategic mind and compassion make him a natural leader, balancing duty with camaraderie.</p>
             </div>
         </div>
@@ -183,8 +100,7 @@
         </div>
         <div class="testimonial">
             <p>"An enthralling read from start to finish." - Reader B</p>
-        </div>
-        <!-- Add more testimonials as needed -->
+        </ <!-- Add more testimonials as needed -->
     </section>
     <footer>
         <p>&copy; 2024 Dawn Clark. All rights reserved.</p>
@@ -196,3 +112,57 @@
     </footer>
 </body>
 </html>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #050A30; /* Dark blue background */
+    color: #e0e0e0; /* Silver text */
+}
+header {
+    background-color: #1A1F6E; /* Deep blue */
+    color: #e0e0e0; /* Silver text */
+    padding: 20px;
+    text-align: center;
+}
+nav {
+    background-color: #3D2C8D; /* Dark purple */
+    padding: 10px;
+}
+nav ul li a {
+    color: #C996CC; /* Light purple */
+    text-decoration: none;
+}
+nav ul li a:hover {
+    color: #FFC7FF; /* Bright pink */
+}
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: #1F0A4D; /* Very dark purple */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+footer {
+    background-color: #1A1F6E; /* Deep blue */
+    color: #e0e0e0; /* Silver text */
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+footer a {
+    color: #e0e0e0; /* Silver text */
+    text-decoration: none;
+    margin: 0 10px;
+}
+footer a:hover {
+    color: #FF6EC7; /* Bright pink */
+}
+.testimonial {
+    background-color: #6A0DAD; /* Dark purple */
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+}
