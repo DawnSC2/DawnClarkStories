@@ -1,0 +1,163 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set smooth scrolling behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #050A30;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #1A1F6E;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+nav {
+    background-color: #3D2C8D;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #C996CC;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #FFC7FF;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+    background-color: #1F0A4D;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+.book-cover {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.book-cover img {
+    width: 200px;
+}
+
+.sample-chapter {
+    text-align: center;
+    margin-top: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label,
+form input,
+form button {
+    margin: 10px 0;
+}
+
+.character-bio {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.character-bio img {
+    width: 150px;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.testimonial {
+    background-color: #6A0DAD;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #1A1F6E;
+    color: #e0e0e0;
+    text-align: center;
+    padding: 10px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #e0e0e0;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #FF6EC7;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .character-bio {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .character-bio img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
