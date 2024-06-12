@@ -105,3 +105,25 @@ backToTopButton.addEventListener('keydown', function(e) {
     topFunction();
   }
 });
+
+// Basic form validation
+function validateForm() {
+  const email = document.getElementById('email').value;
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!emailPattern.test(email)) {
+    alert('Please enter a valid email address.');
+    return false;
+  }
+  return true;
+}
+
+// Lightbox initialization
+document.addEventListener('DOMContentLoaded', function() {
+  lightbox.option({
+    'resizeDuration': 200,
+    'wrapAround': true,
+    'fadeDuration': 200,
+    'imageFadeDuration': 200
+  });
+});
