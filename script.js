@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   } else {
     // Fallback for browsers that do not support IntersectionObserver
+    console.log('IntersectionObserver not supported');
     lazyImages.forEach(function(lazyImage) {
       lazyImage.src = lazyImage.dataset.src;
       lazyImage.classList.remove("lazy");
@@ -106,24 +107,35 @@ backToTopButton.addEventListener('keydown', function(e) {
   }
 });
 
-// Basic form validation
-function validateForm() {
-  const email = document.getElementById('email').value;
+// Enhanced form validation
+document.getElementById('signup-form').addEventListener('submit', function(e) {
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (name === '') {
+    alert('Please enter your name.');
+    e.preventDefault();
+    return false;
+  }
 
   if (!emailPattern.test(email)) {
     alert('Please enter a valid email address.');
+    e.preventDefault();
     return false;
   }
-  return true;
-}
 
-// Lightbox initialization
+  return true;
+});
+
+// Lightbox initialization with enhanced options
 document.addEventListener('DOMContentLoaded', function() {
   lightbox.option({
     'resizeDuration': 200,
     'wrapAround': true,
     'fadeDuration': 200,
-    'imageFadeDuration': 200
+    'imageFadeDuration': 200,
+    'alwaysShowNavOnTouchDevices': true,
+    'showImageNumberLabel': false
   });
 });
