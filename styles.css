@@ -95,22 +95,38 @@ nav ul li a:hover {
 
 /* Main Content */
 main {
-  padding: var(--spacing-unit) * 2;
+  padding: calc(var(--spacing-unit) * 2);
   background-color: rgba(255, 255, 255, 0.1);
 }
 
 section {
-  margin-bottom: var(--spacing-unit) * 4;
+  margin-bottom: calc(var(--spacing-unit) * 4);
   background-color: var(--secondary-bg-color);
-  padding: var(--spacing-unit) * 2;
+  padding: calc(var(--spacing-unit) * 2);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
+}
+
+.section {
+  position: relative;
+  padding: 50px 20px;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  clip-path: polygon(0 0, 100% 0, 100% 15%, 0 100%);
 }
 
 h2 {
   font-family: var(--heading-font-family);
   font-size: 2rem;
-  margin-bottom: var(--spacing-unit) * 2;
+  margin-bottom: calc(var(--spacing-unit) * 2);
   transition: color var(--transition-duration), text-shadow var(--transition-duration);
 }
 
@@ -120,12 +136,12 @@ h2:hover {
 }
 
 p {
-  margin-bottom: var(--spacing-unit) * 1.5;
+  margin-bottom: calc(var(--spacing-unit) * 1.5);
 }
 
 .book-cover {
   text-align: center;
-  margin-bottom: var(--spacing-unit) * 2;
+  margin-bottom: calc(var(--spacing-unit) * 2);
 }
 
 .book-cover img {
@@ -134,7 +150,7 @@ p {
 
 .space-battle {
   text-align: center;
-  margin-top: var(--spacing-unit) * 2;
+  margin-top: calc(var(--spacing-unit) * 2);
 }
 
 .space-battle img {
@@ -146,7 +162,7 @@ p {
 
 .sample-chapter {
   text-align: center;
-  margin-top: var(--spacing-unit) * 2;
+  margin-top: calc(var(--spacing-unit) * 2);
 }
 
 form {
@@ -165,7 +181,7 @@ form button {
 .character-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: var(--spacing-unit) * 2;
+  gap: calc(var(--spacing-unit) * 2);
 }
 
 .character-bio {
@@ -173,7 +189,7 @@ form button {
   flex-direction: column;
   align-items: center;
   background-color: var(--secondary-bg-color);
-  padding: var(--spacing-unit) * 2;
+  padding: calc(var(--spacing-unit) * 2);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   transition: transform var(--transition-duration) ease-in-out;
@@ -235,7 +251,7 @@ footer {
 }
 
 footer p {
-  margin: var(--spacing-unit) / 2;
+  margin: calc(var(--spacing-unit) / 2);
 }
 
 footer a {
@@ -253,8 +269,8 @@ footer a:hover {
 #backToTop {
   display: none;
   position: sticky;
-  bottom: var(--spacing-unit) * 2;
-  right: var(--spacing-unit) * 3;
+  bottom: calc(var(--spacing-unit) * 2);
+  right: calc(var(--spacing-unit) * 3);
   z-index: 99;
   font-size: 18px;
   border: none;
@@ -262,7 +278,7 @@ footer a:hover {
   background-color: #3D2C8D;
   color: white;
   cursor: pointer;
-  padding: var(--spacing-unit) * 1.5;
+  padding: calc(var(--spacing-unit) * 1.5);
   border-radius: var(--border-radius);
   opacity: 0.5;
   transition: opacity var(--transition-duration);
