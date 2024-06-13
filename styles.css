@@ -9,6 +9,11 @@
   --focus-color: #FF6EC7;
   --header-bg-image: url('images/fantasy-alienplanet.jpeg');
   --font-family: 'Roboto', sans-serif;
+  --heading-font-family: 'Montserrat', sans-serif;
+  --spacing-unit: 10px;
+  --border-radius: 8px;
+  --box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  --transition-duration: 0.3s;
 }
 
 /* Reset default browser styles */
@@ -47,8 +52,9 @@ header.hero-section {
 }
 
 header.hero-section h1 {
+  font-family: var(--heading-font-family);
   font-size: 3rem;
-  margin-bottom: 10px;
+  margin-bottom: var(--spacing-unit);
 }
 
 header.hero-section p {
@@ -60,7 +66,7 @@ nav {
   position: sticky;
   top: 0;
   background-color: #3D2C8D;
-  padding: 10px;
+  padding: var(--spacing-unit);
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -69,17 +75,17 @@ nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
-  background-color: var(--primary-bg-color); /* Added background color */
+  background-color: var(--primary-bg-color);
 }
 
 nav ul li {
-  margin: 0 10px;
+  margin: 0 var(--spacing-unit);
 }
 
 nav ul li a {
   color: var(--link-color);
   text-decoration: none;
-  transition: color 0.3s, text-shadow 0.3s;
+  transition: color var(--transition-duration), text-shadow var(--transition-duration);
 }
 
 nav ul li a:hover {
@@ -89,22 +95,23 @@ nav ul li a:hover {
 
 /* Main Content */
 main {
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.1); /* Subtle background color for readability */
+  padding: var(--spacing-unit) * 2;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 section {
-  margin-bottom: 40px;
+  margin-bottom: var(--spacing-unit) * 4;
   background-color: var(--secondary-bg-color);
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: var(--spacing-unit) * 2;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
 }
 
 h2 {
+  font-family: var(--heading-font-family);
   font-size: 2rem;
-  margin-bottom: 20px;
-  transition: color 0.3s, text-shadow 0.3s;
+  margin-bottom: var(--spacing-unit) * 2;
+  transition: color var(--transition-duration), text-shadow var(--transition-duration);
 }
 
 h2:hover {
@@ -113,12 +120,12 @@ h2:hover {
 }
 
 p {
-  margin-bottom: 15px;
+  margin-bottom: var(--spacing-unit) * 1.5;
 }
 
 .book-cover {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: var(--spacing-unit) * 2;
 }
 
 .book-cover img {
@@ -127,19 +134,19 @@ p {
 
 .space-battle {
   text-align: center;
-  margin-top: 20px;
+  margin-top: var(--spacing-unit) * 2;
 }
 
 .space-battle img {
   width: 100%;
   max-width: 800px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
 }
 
 .sample-chapter {
   text-align: center;
-  margin-top: 20px;
+  margin-top: var(--spacing-unit) * 2;
 }
 
 form {
@@ -151,50 +158,49 @@ form {
 form label,
 form input,
 form button {
-  margin: 10px 0;
+  margin: var(--spacing-unit);
 }
 
 /* Character Grid */
 .character-grid {
-  display: flex; /* Changed from grid to flex */
-  flex-wrap: wrap;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-unit) * 2;
 }
 
 .character-bio {
-  flex: 1 1 calc(33.333% - 20px);
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: var(--secondary-bg-color);
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease-in-out;
+  padding: var(--spacing-unit) * 2;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  transition: transform var(--transition-duration) ease-in-out;
 }
 
 .character-bio:hover {
-  transform: scale(1.1); /* Slightly less dramatic hover effect */
+  transform: scale(1.05);
 }
 
 .character-bio img {
   width: 150px;
-  border-radius: 8px;
-  margin-bottom: 10px;
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-unit);
 }
 
 /* Gallery */
 .gallery {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: var(--spacing-unit);
   justify-content: center;
 }
 
 .gallery-item {
-  width: calc(33% - 10px);
+  width: calc(33% - var(--spacing-unit));
   position: relative;
-  transition: box-shadow 0.3s;
+  transition: box-shadow var(--transition-duration);
 }
 
 .gallery-item:hover {
@@ -204,8 +210,8 @@ form button {
 .gallery-item img {
   width: 100%;
   height: auto;
-  border-radius: 8px;
-  transition: transform 0.3s;
+  border-radius: var(--border-radius);
+  transition: transform var(--transition-duration);
 }
 
 .gallery-item:hover img {
@@ -215,9 +221,9 @@ form button {
 /* Testimonials */
 .testimonial {
   background-color: #6A0DAD;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 8px;
+  padding: var(--spacing-unit);
+  margin-bottom: var(--spacing-unit);
+  border-radius: var(--border-radius);
 }
 
 /* Footer */
@@ -225,18 +231,18 @@ footer {
   background-color: #1A1F6E;
   color: var(--text-color);
   text-align: center;
-  padding: 10px;
+  padding: var(--spacing-unit);
 }
 
 footer p {
-  margin: 5px 0;
+  margin: var(--spacing-unit) / 2;
 }
 
 footer a {
   color: var(--text-color);
   text-decoration: none;
-  margin: 0 10px;
-  transition: color 0.3s;
+  margin: 0 var(--spacing-unit);
+  transition: color var(--transition-duration);
 }
 
 footer a:hover {
@@ -246,9 +252,9 @@ footer a:hover {
 /* Back to Top Button */
 #backToTop {
   display: none;
-  position: sticky; /* Changed from fixed to sticky */
-  bottom: 20px;
-  right: 30px;
+  position: sticky;
+  bottom: var(--spacing-unit) * 2;
+  right: var(--spacing-unit) * 3;
   z-index: 99;
   font-size: 18px;
   border: none;
@@ -256,15 +262,15 @@ footer a:hover {
   background-color: #3D2C8D;
   color: white;
   cursor: pointer;
-  padding: 15px;
-  border-radius: 4px;
-  opacity: 0.2; /* Make the button visible with lower opacity */
-  transition: opacity 0.3s;
+  padding: var(--spacing-unit) * 1.5;
+  border-radius: var(--border-radius);
+  opacity: 0.5;
+  transition: opacity var(--transition-duration);
 }
 
 #backToTop:hover {
   background-color: #555;
-  opacity: 1; /* Fully opaque on hover */
+  opacity: 1;
 }
 
 /* Keyframes for fade-in animation */
@@ -274,7 +280,7 @@ footer a:hover {
 }
 
 /* Focus styles for accessibility */
-a:focus, button:focus {
+a:focus, button:focus, input:focus, textarea:focus, select:focus {
   outline: 2px solid var(--focus-color);
 }
 
@@ -299,7 +305,7 @@ a:focus, button:focus {
 
   .character-bio img {
     margin-right: 0;
-    margin-bottom: 10px;
+    margin-bottom: var(--spacing-unit);
   }
 }
 
