@@ -7,7 +7,7 @@
   --link-color: #C996CC;
   --link-hover-color: #FFC7FF;
   --focus-color: #FF6EC7;
-  --header-bg-image: url('images/fantasy-alienplanet.jpeg');
+  --header-bg-image: url('images/fantasy-alienplanet.jpg');
   --font-family: 'Roboto', sans-serif;
   --heading-font-family: 'Montserrat', sans-serif;
   --spacing-unit: 10px;
@@ -39,7 +39,8 @@ body {
 header.hero-section {
   background-image: var(--header-bg-image);
   background-size: cover;
-  background-position: center;
+  background-position
+background-position: center;
   color: white;
   text-align: center;
   padding: 100px 20px;
