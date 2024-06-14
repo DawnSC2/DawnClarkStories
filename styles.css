@@ -37,10 +37,10 @@ body {
 
 /* Hero Section */
 header.hero-section {
-  background-image: var(--header-bg-image);
+  background-image: var(--header-bg-image
+);
   background-size: cover;
-  background-position
-background-position: center;
+  background-position: center;
   color: white;
   text-align: center;
   padding: 100px 20px;
