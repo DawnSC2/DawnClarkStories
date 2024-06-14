@@ -4,16 +4,12 @@
   "description": "Dawn Clark Stories website",
   "main": "index.js",
   "scripts": {
-    "build": "cp -R * ./build", 
+    "build": "if exist build rmdir /s /q build && xcopy /E /I * build /EXCLUDE:exclude.txt",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Dawn Clark",
   "license": "ISC",
-  "dependencies": {
-    // Your dependencies here
-  },
-  "devDependencies": {
-    // Your dev dependencies here
-  }
+  "dependencies": {},
+  "devDependencies": {}
 }
