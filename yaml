@@ -15,27 +15,27 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # Checkout the repository code
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      # Checkout the repository code
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    # Set up Node.js environment
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '20'
+      # Set up Node.js environment
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
 
-    # Install project dependencies
-    - name: Install dependencies
-      run: npm install
+      # Install project dependencies
+      - name: Install dependencies
+        run: npm install
 
-    # Build the project
-    - name: Build
-      run: npm run build
+      # Build the project
+      - name: Build
+        run: npm run build
 
-    # Deploy the built files to GitHub Pages
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build
+      # Deploy the built files to GitHub Pages
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
