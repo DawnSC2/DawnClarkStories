@@ -2,12 +2,11 @@
   "name": "dawnclarkstories",
   "version": "1.0.0",
   "description": "The Chronicles of the Few - A Saga Forged in Starlight",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
-    "build": "echo 'Running build script...'",
-    "start": "echo 'Starting project...'"
+    "build": "echo 'Building the project...' && mkdir -p build && cp -R * build/"
   },
+  "keywords": ["science fiction", "space opera", "The Chronicles of the Few", "Dawn Clark"],
   "author": "Dawn Clark",
-  "license": "ISC",
-  "dependencies": {}
+  "license": "ISC"
 }
