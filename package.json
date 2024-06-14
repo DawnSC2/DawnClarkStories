@@ -1,12 +1,19 @@
 {
-  "name": "dawnclarkstories",
+  "name": "dawn-clark-stories",
   "version": "1.0.0",
-  "description": "The Chronicles of the Few - A Saga Forged in Starlight",
-  "main": "index.html",
+  "description": "Dawn Clark Stories website",
+  "main": "index.js",
   "scripts": {
-    "build": "echo 'Building the project...' && mkdir -p build && cp -R * build/"
+    "build": "cp -R * ./build", 
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["science fiction", "space opera", "The Chronicles of the Few", "Dawn Clark"],
+  "keywords": [],
   "author": "Dawn Clark",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    // Your dependencies here
+  },
+  "devDependencies": {
+    // Your dev dependencies here
+  }
 }
