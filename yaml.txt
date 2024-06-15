@@ -1,0 +1,56 @@
+name: Deploy static content to Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.OS }}-node-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            ${{ runner.OS }}-node-
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Check for Deployment Tag
+        run: |
+          if [ "${{ github.ref_type }}" == "tag" ]; then
+            echo "This is a tagged commit. Proceeding with deployment."
+          else
+            echo "Skipping deployment as this is not a tagged commit."
+            exit 0
+          fi
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+
+      - name: Success
+        if: ${{ success() }}
+        run: echo "Deployment succeeded!"
+
+      - name: Failure
+        if: ${{ failure() }}
+        run: echo "Build failed. Notifying developers."
