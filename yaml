@@ -1,5 +1,5 @@
 # Name of the workflow
-name: Deploy Static Website to GitHub Pages
+name: Deploy static content to Pages
 
 # Trigger the workflow on push events to the main branch
 on:
@@ -9,7 +9,6 @@ on:
 
 # Define the jobs to be executed
 jobs:
-
   # Job to build and deploy the website
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -17,7 +16,7 @@ jobs:
     steps:
       # Checkout the repository code
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       # Set up Node.js environment
       - name: Setup Node.js
@@ -25,28 +24,9 @@ jobs:
         with:
           node-version: '20'
 
-      # Cache dependencies
-      - name: Cache dependencies
-        uses: actions/cache@v3
-        with:
-          path: ~/.npm
-          key: ${{ runner.OS }}-node-${{ hashFiles('package-lock.json') }}
-          restore-keys: |
-            ${{ runner.OS }}-node-
-
       # Install project dependencies
       - name: Install dependencies
         run: npm install
-
-      # Check for Deployment Tag
-      - name: Check for Deployment Tag
-        run: |
-          if [[ ${{ github.ref_type }} == "tag" ]]; then
-            echo "This is a tagged commit. Proceeding with deployment."
-          else
-            echo "Skipping deployment as this is not a tagged commit."
-            exit 0
-          fi
 
       # Build the project
       - name: Build
@@ -59,12 +39,12 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
 
+      # Handle failures
+      - name: Failure
+        if: ${{ failure() }}
+        run: echo "Deployment failed!"
+      
       # Success message
       - name: Success
         if: ${{ success() }}
         run: echo "Deployment succeeded!"
-
-      # Handle failure
-      - name: Failure
-        if: ${{ failure() }}
-        run: echo "Build failed. Notifying developers."
