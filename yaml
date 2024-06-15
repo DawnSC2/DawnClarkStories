@@ -49,6 +49,9 @@ jobs:
 
       - name: Success
         if: ${{ success() }}
-        run: echo "Deployment s
+        run: echo "Deployment succeeded!"
 
+      - name: Failure
+        if: ${{ failure() }}
+        run: echo "Build failed. Notifying developers."
 
