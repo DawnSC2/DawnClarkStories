@@ -4,7 +4,7 @@
   "description": "Dawn Clark Stories website",
   "main": "index.js",
   "scripts": {
-    "build": "if exist build rmdir /s /q build && xcopy /E /I . build /EXCLUDE:exclude.txt",
+    "build": "mkdir -p build && cp -R * build/ && rm -rf build/{node_modules,.github,.git}",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
