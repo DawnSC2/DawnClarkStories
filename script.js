@@ -147,3 +147,29 @@ document.addEventListener('DOMContentLoaded', function() {
     console.error('Lightbox library is not loaded.');
   }
 });
+
+// Real-time form validation
+document.querySelectorAll('input, textarea').forEach(input => {
+  input.addEventListener('input', function() {
+    if (this.validity.valid) {
+      this.classList.remove('invalid');
+      this.classList.add('valid');
+    } else {
+      this.classList.remove('valid');
+      this.classList.add('invalid');
+    }
+  });
+});
+
+// Infinite scroll for loading more content
+window.addEventListener('scroll', debounce(function() {
+  if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+    // Load more content here
+    loadMoreContent();
+  }
+}, 200));
+
+function loadMoreContent() {
+  // Placeholder for actual content loading logic
+  console.log('Loading more content...');
+}
