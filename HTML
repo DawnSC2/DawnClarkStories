@@ -162,10 +162,15 @@
           <p><a href="sample-chapter.pdf" download>Download Sample Chapter</a></p>
         </div>
         <div class="purchase-buttons">
-          <!-- PayPal button code -->
-          <script src="https://www.paypal.com/sdk/js?client-id=BAA_slYs-zX6-PgpzBBH5xa4qreilzv516kzr9zwMSL9J4Y
-          <script src="https://www.paypal.com/sdk/js?client-id=BAA_slYs-zX6-PgpzBBH5xa4qreilzv516kzr9zwMSL9J4Y3qhjujL9I8dOvo58acEOMutY2SX4OYCvoH0&components=hosted-buttons&enable-funding=venmo&currency=USD"></script>
-          <div id="paypal-container-GXDLC9CXZSQD6"></div>
+<!-- PayPal button code -->
+<script src="https://www.paypal.com/sdk/js?client-id=BAA_slYs-zX6-PgpzBBH5xa4qreilzv516kzr9zwMSL9J4Y3qhjujL9I8dOvo58acEOMutY2SX4OYCvoH0&components=hosted-buttons&enable-funding=venmo&currency=USD"></script>
+<div id="paypal-container-GXDLC9CXZSQD6"></div>
+<script>
+  paypal.HostedButtons({
+    hostedButtonId: "GXDLC9CXZSQD6",
+  }).render("#paypal-container-GXDLC9CXZSQD6");
+</script>
+
           <script>
             paypal.HostedButtons({
               hostedButtonId: "GXDLC9CXZSQD6",
