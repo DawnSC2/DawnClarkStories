@@ -1,57 +1,26 @@
-name: Deploy static content to Pages
+name: Node.js CI
 
 on:
   push:
-    branches:
-      - main
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+    strategy:
+      matrix:
+        node-version: [20.x]
 
-      - name: Setup Node.js
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
-          node-version: '20'
+          node-version: ${{ matrix.node-version }}
+      - run: npm install
+      - run: npm test
 
-      - name: Cache dependencies
-        uses: actions/cache@v3
-        with:
-          path: ~/.npm
-          key: ${{ runner.OS }}-node-${{ hashFiles('package-lock.json') }}
-          restore-keys: |
-            ${{ runner.OS }}-node-
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Check for Deployment Tag
-        run: |
-          if [ "${{ github.ref_type }}" == "tag" ]; then
-            echo "This is a tagged commit. Proceeding with deployment."
-          else
-            echo "Skipping deployment as this is not a tagged commit."
-            exit 0
-          fi
-
-      - name: Build
-        run: npm run build
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
-
-      - name: Success
-        if: ${{ success() }}
-        run: echo "Deployment succeeded!"
-
-      - name: Failure
-        if: ${{ failure() }}
-        run: echo "Build failed. Notifying developers."
 
