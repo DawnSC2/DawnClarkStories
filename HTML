@@ -149,8 +149,8 @@
       </div>
       <article>
         <p>The cosmos trembles on the precipice of oblivion. A galactic empire crumbles, ravaged by treachery and whispers of a coming storm. Enter The Chronicles of the Few, a legend etched in the fires of a thousand battles.</p>
-        <p>Lord Gresham, a titan cloaked in stoicism, wields ancient and awesome power. He is one of the FEW, enigmatic beings whose very existence holds the key to galactic salvation.</p>
-        <p>Lady Mara stands by his side, a beacon of unwavering courage and empathy. Her love is a fortress against the encroaching darkness.</p>
+        <p>Lord Gresham, a titan cloaked in stoicism, wields ancient and awesome power. He is one of the FEW enigmatic beings whose very existence holds the key to galactic salvation.</p>
+        <p>Lady Mara, a beacon of unwavering courage and empathy, stands by his side. Her love is a fortress against the encroaching darkness.</p>
         <p>Commander Levi, a rogue with a fierce sense of loyalty and a mind as sharp as a supernova, becomes an unlikely ally. His cunning and charisma weave a tapestry of loyalty amidst the threads of deceit.</p>
         <p>Together, they embark on an odyssey across a cosmos ablaze. Their choices will ripple through the vast expanse, dictating the fate of civilizations. Witness thrilling battles that paint the void with the brilliance of a thousand suns. Unravel intricate betrayals that threaten to tear the fabric of reality. Feel the profound love that burns brighter than any star, a testament to the enduring human spirit.</p>
         <p>The Chronicles of the Few is a symphony of action, romance, and a dash of cosmic humor, a saga that crescendos in an explosive showdown that will leave you breathless. Prepare to be swept away by a captivating adventure where intricate relationships intertwine with heroic feats and dramatic twists. Explore the cosmos, where legends are born and destinies are forged in starlight.</p>
@@ -163,7 +163,9 @@
         </div>
         <div class="purchase-buttons">
           <!-- PayPal button code -->
-                    <div id="paypal-container-GXDLC9CXZSQD6"></div>
+          <script src="https://www.paypal.com/sdk/js?client-id=BAA_slYs-zX6-PgpzBBH5xa4qreilzv516kzr9zwMSL9J4Y
+          <script src="https://www.paypal.com/sdk/js?client-id=BAA_slYs-zX6-PgpzBBH5xa4qreilzv516kzr9zwMSL9J4Y3qhjujL9I8dOvo58acEOMutY2SX4OYCvoH0&components=hosted-buttons&enable-funding=venmo&currency=USD"></script>
+          <div id="paypal-container-GXDLC9CXZSQD6"></div>
           <script>
             paypal.HostedButtons({
               hostedButtonId: "GXDLC9CXZSQD6",
@@ -209,7 +211,7 @@
           <img src="images/Commander Levi.png" alt="Commander Levi">
           <div>
             <h3>Commander Levi</h3>
-            <p>Commander Levi wears a space military suit that is dark blue with white and silver markings. He has light brown hair and green eyes. Friendly and charismatic, he knows every crew member's name and strengths. He can work with anyone and makes sure to bond with his crew, earning their respect and admiration. Levi is friendly, kind, and always willing to help, yet stern in his beliefs. His strategic mind and compassion make him a natural leader, balancing duty with camaraderie.</p>
+            <p>Commander Levi wears a space military suit that is dark blue with white and silver markings. He has light brown hair and green eyes. Friendly and charismatic, he knows every crew member's name and strengths. He can work with anyone and bond with his crew, earning their respect and admiration. Levi is friendly, kind, and always willing to help, yet stern in his beliefs. His strategic mind and compassion make him a natural leader, balancing duty with camaraderie.</p>
           </div>
         </article>
       </div>
@@ -267,7 +269,6 @@
         <p>Dawn is happily married and blessed with a grown child and an adorable grandson. She finds joy in the simple things, like playing fetch with Bentley and witnessing his infectious enthusiasm for life.</p>
       </div>
     </section>
-
     <!-- Comment Section -->
     <section id="comments" class="reveal section">
       <h2>Comments</h2>
@@ -291,179 +292,176 @@
   <footer>
     <p>&copy; 2024 Dawn Clark. All rights reserved.</p>
     <p>Follow me on 
-      <a href="https://www.facebook.com/dawn.clark.52438" target="_blank" aria-label="Facebook"><img src="images/Facebooklogo.png" alt="Facebook"></a>, 
-      <a href="https://x.com/ClarkDawns" target="_blank" aria-label="Twitter"><img src="images/Xlog.webp" alt="Twitter"></a>, 
-      <a href="https://www.instagram.com/clarkdaw2/" target="_blank" aria-label="Instagram"><img src="images/instagram.jpeg" alt="Instagram"></a>
-    </p>
-<script src="https://www.paypal.com/sdk/js?client
-    </p>
-  </footer>
+      <a href="https://www.facebook.com/dawn.clark.52438" target="_blank" aria-label="
+    <a href="https://x.com/ClarkDawns" target="_blank" aria-label="Twitter"><img src="images/Xlog.webp" alt="Twitter"></a>, 
+    <a href="https://www.instagram.com/clarkdaw2/" target="_blank" aria-label="Instagram"><img src="images/instagram.jpeg" alt="Instagram"></a>
+  </p>
+</footer>
+<!-- Back to Top Button -->
+<button onclick="topFunction()" id="backToTop" title="Go to top">Top</button>
 
-  <!-- Back to Top Button -->
-  <button onclick="topFunction()" id="backToTop" title="Go to top">Top</button>
+<!-- Lightbox Script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 
-  <!-- Lightbox Script -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
-
-  <!-- Additional JavaScript for functionality -->
-  <script>
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth'
-          });
-        } else {
-          console.error('Target not found:', this.getAttribute('href'));
-        }
-      });
-    });
-
-    // Lazy loading for images
-    document.addEventListener("DOMContentLoaded", function() {
-      const lazyImages = document.querySelectorAll(".lazy");
-      if ('IntersectionObserver' in window) {
-        let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
-          entries.forEach(function(entry) {
-            if (entry.isIntersecting) {
-              let lazyImage = entry.target;
-              lazyImage.src = lazyImage.dataset.src;
-              lazyImage.classList.remove("lazy");
-              lazyImageObserver.unobserve(lazyImage);
-            }
-          });
-        });
-        lazyImages.forEach(function(lazyImage) {
-          lazyImageObserver.observe(lazyImage);
+<!-- Additional JavaScript for functionality -->
+<script>
+  // Smooth scrolling for navigation links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth'
         });
       } else {
-        lazyImages.forEach(function(lazyImage) {
-          lazyImage.src = lazyImage.dataset.src;
-          lazyImage.classList.remove("lazy");
-        });
+        console.error('Target not found:', this.getAttribute('href'));
       }
     });
+  });
 
-    // Debounce function to limit scrollFunction calls
-    function debounce(func, wait) {
-      let timeout;
-      return function(...args) {
-        const later = () => {
-          clearTimeout(timeout);
-          func(...args);
-        };
+  // Lazy loading for images
+  document.addEventListener("DOMContentLoaded", function() {
+    const lazyImages = document.querySelectorAll(".lazy");
+    if ('IntersectionObserver' in window) {
+      let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            let lazyImage = entry.target;
+            lazyImage.src = lazyImage.dataset.src;
+            lazyImage.classList.remove("lazy");
+            lazyImageObserver.unobserve(lazyImage);
+          }
+        });
+      });
+      lazyImages.forEach(function(lazyImage) {
+        lazyImageObserver.observe(lazyImage);
+      });
+    } else {
+      lazyImages.forEach(function(lazyImage) {
+        lazyImage.src = lazyImage.dataset.src;
+        lazyImage.classList.remove("lazy");
+      });
+    }
+  });
+
+  // Debounce function to limit scrollFunction calls
+  function debounce(func, wait) {
+    let timeout;
+    return function(...args) {
+      const later = () => {
         clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
+        func(...args);
       };
-    }
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+    };
+  }
 
-    // Throttle function to limit the number of times topFunction can be called
-    function throttle(func, limit) {
-      let lastFunc;
-      let lastRan;
-      return function(...args) {
-        const context = this;
-        if (!lastRan) {
-          func.apply(context, args);
-          lastRan = Date.now();
-        } else {
-          clearTimeout(lastFunc);
-          lastFunc = setTimeout(function() {
-            if ((Date.now() - lastRan) >= limit) {
-              func.apply(context, args);
-              lastRan = Date.now();
-            }
-          }, limit - (Date.now() - lastRan));
-        }
-      };
-    }
-
-    // Back to top button functionality
-    const backToTopButton = document.getElementById("backToTop");
-
-    window.addEventListener('scroll', debounce(function() {
-      requestAnimationFrame(scrollFunction);
-    }, 100));
-
-    function scrollFunction() {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        backToTopButton.style.display = "block";
+  // Throttle function to limit the number of times topFunction can be called
+  function throttle(func, limit) {
+    let lastFunc;
+    let lastRan;
+    return function(...args) {
+      const context = this;
+      if (!lastRan) {
+        func.apply(context, args);
+        lastRan = Date.now();
       } else {
-        backToTopButton.style.display = "none";
+        clearTimeout(lastFunc);
+        lastFunc = setTimeout(function() {
+          if ((Date.now() - lastRan) >= limit) {
+            func.apply(context, args);
+            lastRan = Date.now();
+          }
+        }, limit - (Date.now() - lastRan));
       }
+    };
+  }
+
+  // Back to top button functionality
+  const backToTopButton = document.getElementById("backToTop");
+
+  window.addEventListener('scroll', debounce(function() {
+    requestAnimationFrame(scrollFunction);
+  }, 100));
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      backToTopButton.style.display = "block";
+    } else {
+      backToTopButton.style.display = "none";
     }
+  }
 
-    const topFunction = throttle(function() {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    }, 1000);
-
-    backToTopButton.addEventListener('click', topFunction);
-
-    // Ensure keyboard accessibility
-    backToTopButton.addEventListener('keydown', function(e) {
-      if (e.key === 'Enter' || e.key === ' ') {
-        topFunction();
-      }
+  const topFunction = throttle(function() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
     });
+  }, 1000);
 
-    // Basic form validation
-    function validateForm() {
-      const email = document.getElementById('email').value;
-      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  backToTopButton.addEventListener('click', topFunction);
 
-      if (!emailPattern.test(email)) {
-        alert('Please enter a valid email address.');
-        return false;
-      }
-
-      const name = document.getElementById('name').value;
-      if (!name) {
-        alert('Please enter your name.');
-        return false;
-      }
-
-      return true;
+  // Ensure keyboard accessibility
+  backToTopButton.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      topFunction();
     }
+  });
 
-    // Lightbox initialization with error handling
-    document.addEventListener('DOMContentLoaded', function() {
-      if (typeof lightbox !== 'undefined') {
-        lightbox.option({
-          'resizeDuration': 200,
-          'wrapAround': true,
-          'fadeDuration': 200,
-          'imageFadeDuration': 200
-        });
-      } else {
-        console.error('Lightbox library is not loaded.');
-      }
-    });
+  // Basic form validation
+  function validateForm() {
+    const email = document.getElementById('email').value;
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    // Add Comment Functionality
-    function addComment() {
-      const name = document.getElementById('commentName').value;
-      const comment = document.getElementById('commentText').value;
-
-      if (name && comment) {
-        const commentList = document.getElementById('commentsUl');
-        const newComment = document.createElement('li');
-        newComment.innerHTML = `<strong>${name}</strong>: ${comment}`;
-        commentList.appendChild(newComment);
-
-        document.getElementById('commentName').value = '';
-        document.getElementById('commentText').value = '';
-        return false; // Prevent form submission
-      }
-
-      alert('Please enter both your name and comment.');
+    if (!emailPattern.test(email)) {
+      alert('Please enter a valid email address.');
       return false;
     }
-  </script>
+
+    const name = document.getElementById('name').value;
+    if (!name) {
+      alert('Please enter your name.');
+      return false;
+    }
+
+    return true;
+  }
+
+  // Lightbox initialization with error handling
+  document.addEventListener('DOMContentLoaded', function() {
+    if (typeof lightbox !== 'undefined') {
+      lightbox.option({
+        'resizeDuration': 200,
+        'wrapAround': true,
+        'fadeDuration': 200,
+        'imageFadeDuration': 200
+      });
+    } else {
+      console.error('Lightbox library is not loaded.');
+    }
+  });
+
+  // Add Comment Functionality
+  function addComment() {
+    const name = document.getElementById('commentName').value;
+    const comment = document.getElementById('commentText').value;
+
+    if (name && comment) {
+      const commentList = document.getElementById('commentsUl');
+      const newComment = document.createElement('li');
+      newComment.innerHTML = `<strong>${name}</strong>: ${comment}`;
+      commentList.appendChild(newComment);
+
+      document.getElementById('commentName').value = '';
+      document.getElementById('commentText').value = '';
+      return false; // Prevent form submission
+    }
+
+    alert('Please enter both your name and comment.');
+    return false;
+  }
+</script>
 </body>
 </html>
