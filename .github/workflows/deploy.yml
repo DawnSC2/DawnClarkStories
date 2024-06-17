@@ -22,7 +22,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ~/.npm
-          key: ${{ runner.OS }}-node-${{ hashFiles('package-lock.json') }}
+          key: ${{ runner.OS }}-node-${{ hashFiles('package-lock.json') }}-v1
           restore-keys: |
             ${{ runner.OS }}-node-
 
@@ -39,3 +39,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm run deploy
+
