@@ -12,7 +12,8 @@
     "lint-fix": "eslint . --fix",
     "gulp": "gulp",
     "precommit": "npm run lint-fix && npm run prettify",
-    "stylelint": "stylelint '**/*.css'"
+    "stylelint": "stylelint '**/*.css'",
+    "lint:css": "stylelint '**/*.css'"
   },
   "keywords": [],
   "author": "Dawn Clark",
