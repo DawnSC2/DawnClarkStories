@@ -30,7 +30,7 @@ jobs:
         run: npm install
 
       - name: Run Stylelint
-        run: npm run lint:css
+        run: npm run stylelint
 
       - name: Build
         run: npm run build
