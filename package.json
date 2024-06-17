@@ -11,7 +11,8 @@
     "prettify": "prettier --write .",
     "lint-fix": "eslint . --fix",
     "gulp": "gulp",
-    "precommit": "npm run lint-fix && npm run prettify"
+    "precommit": "npm run lint-fix && npm run prettify",
+    "stylelint": "stylelint '**/*.css'"
   },
   "keywords": [],
   "author": "Dawn Clark",
@@ -25,6 +26,8 @@
     "gulp": "^4.0.2",
     "gulp-eslint": "^6.0.0",
     "gulp-prettier": "^3.0.0",
-    "gh-pages": "^3.2.3"
+    "gh-pages": "^3.2.3",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^22.0.0"
   }
 }
