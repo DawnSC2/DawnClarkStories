@@ -268,7 +268,7 @@ footer a:hover {
 #backToTop {
   display: none;
   position: sticky;
-  bottom: calc(var(--spacing-unit) * 2);
+  bottom: calc(var(--spacing-unit) *bottom: calc(var(--spacing-unit) * 2);
   right: calc(var(--spacing-unit) * 3);
   z-index: 99;
   font-size: 18px;
@@ -286,12 +286,6 @@ footer a:hover {
 #backToTop:hover {
   background-color: #555;
   opacity: 1;
-}
-
-/* Keyframes for fade-in animation */
-@keyframes fadeOpacity {
-  from { opacity: 0; }
-  to { opacity: 1; }
 }
 
 /* Focus styles for accessibility */
