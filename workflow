@@ -30,15 +30,7 @@ jobs:
         run: npm install
 
       - name: Run Stylelint
-        run: npm run stylelint
-
-      - name: Build
-        run: npm run build
-
-      - name: Deploy
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npm run deploy
+        run: npm run lint:css
 
       - name: Build
         run: npm run build
