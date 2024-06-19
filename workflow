@@ -33,9 +33,12 @@ jobs:
         run: npm run lint:css
 
       - name: Build
-        run: npm run build
+        run: |
+          npm run build
+          touch build/.nojekyll  # Ensure .nojekyll is in the build directory
 
-      - name: Deploy
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npm run deploy
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
