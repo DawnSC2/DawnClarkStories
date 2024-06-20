@@ -4,7 +4,7 @@
   "description": "Dawn Clark Stories website",
   "main": "index.js",
   "scripts": {
-    "build": "rimraf build && mkdirp build && cpx '**/*' build --dereference --exclude 'exclude.txt'",
+    "build": "rimraf build && mkdirp build && cpx '**/*' build --dereference '!node_modules/**' '!git/**' '!.github/**'",
     "deploy": "gh-pages -d build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
