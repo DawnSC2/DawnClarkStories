@@ -1,20 +1,20 @@
-const gulp = require('gulp');
+const { src, dest, series, parallel, watch } = require('gulp');
 const eslint = require('gulp-eslint');
 const prettier = require('gulp-prettier');
 
-gulp.task('lint', () => {
-  return gulp
-    .src(['**/*.js', '!node_modules/**'])
+function lint() {
+  return src(['**/*.js', '!node_modules/**', '!build/**'])
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
-});
+}
 
-gulp.task('prettify', () => {
-  return gulp
-    .src(['**/*.js', '!node_modules/**'])
+function prettify() {
+  return src(['**/*.js', '!node_modules/**', '!build/**'])
     .pipe(prettier())
-    .pipe(gulp.dest(file => file.base));
-});
+    .pipe(dest(file => file.base));
+}
 
-gulp.task('default', gulp.series('lint', 'prettify'));
+exports.lint = lint;
+exports.prettify = prettify;
+exports.default = series(lint, prettify);

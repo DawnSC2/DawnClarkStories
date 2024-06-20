@@ -1,5 +1,11 @@
 {
-  "semi": true,
+  "s{
+  "singleQuote": true,
+  "trailingComma": "all",
+  "printWidth": 80,
+  "tabWidth": 2
+}
+emi": true,
   "singleQuote": true,
   "printWidth": 80
 }

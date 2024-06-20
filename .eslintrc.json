@@ -1,3 +1,4 @@
+// .eslintrc.json
 {
   "env": {
     "browser": true,
@@ -16,4 +17,3 @@
     "semi": ["error", "always"]
   }
 }
-
