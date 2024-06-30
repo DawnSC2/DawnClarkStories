@@ -39,7 +39,6 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}  # Use output from build job
     permissions:
       contents: read
       pages: write
@@ -53,7 +52,6 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: build
-          path: ./build
 
       - name: Deploy to GitHub Pages
         run: |
