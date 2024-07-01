@@ -1,2 +1,3 @@
 * text=auto
-node_modules/stylelint/*
+*node_modules/stylelint
+*.ts text eol=lf
