@@ -6,7 +6,7 @@
   "scripts": {
     "build": "rimraf build && mkdirp build && cpx '**/*' build --dereference --exclude 'node_modules' --exclude '.git' --exclude '.github' && touch build/.nojekyll",
     "deploy": "gh-pages -d build",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "lint": "eslint .",
     "prettify": "prettier --write .",
     "lint-fix": "eslint . --fix",
@@ -28,10 +28,11 @@
     "gulp-eslint": "^6.0.0",
     "gulp-prettier": "^3.0.0",
     "gh-pages": "^5.3.0",
-    "stylelint": "^14.0.0",
-    "stylelint-config-standard": "^22.0.0",
+    "stylelint": "^16.6.1",
+    "stylelint-config-standard": "^36.0.1",
     "rimraf": "^4.0.0",
     "mkdirp": "^1.0.4",
-    "cpx": "^1.5.0"
+    "cpx": "^1.5.0",
+    "jest": "^27.0.6"
   }
 }
