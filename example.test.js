@@ -1,1 +1,5 @@
-example.test.js
+// example.test.js
+test('simple test', () => {
+  expect(true).toBe(true);
+});
+
