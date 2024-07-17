@@ -1,4 +1,9 @@
 // example.test.js
+
+test('simple test', () => {
+  expect(true).toBe(true);
+});
+
 test('example test', () => {
-    expect(1 + 1).toBe(2);
+  expect(1 + 1).toBe(2);
 });
