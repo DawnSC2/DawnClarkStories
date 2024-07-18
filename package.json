@@ -4,16 +4,18 @@
   "description": "Dawn Clark Stories website",
   "main": "index.js",
   "scripts": {
-    "build": "rimraf build && mkdirp build && cpx '**/*' build --dereference --exclude 'node_modules' --exclude '.git' --exclude '.github' && touch build/.nojekyll",
-    "deploy": "gh-pages -d build",
-    "test": "jest",
-    "lint": "eslint .",
-    "prettify": "prettier --write .",
-    "lint-fix": "eslint . --fix",
-    "gulp": "gulp",
-    "precommit": "npm run lint-fix && npm run prettify",
-    "stylelint": "stylelint '**/*.css'",
-    "lint:css": "stylelint '**/*.css'"
+  "build": "rimraf build && mkdirp build && cpx \"**/*\" build --dereference --exclude 'node_modules' --exclude '.git' --exclude '.github' && touch build/.nojekyll",
+  "deploy": "gh-pages -d build",
+  "test": "jest",
+  "lint": "eslint .",
+  "prettify": "prettier --write .",
+  "lint-fix": "eslint . --fix",
+  "gulp": "gulp",
+  "precommit": "npm run lint-fix && npm run prettify",
+  "stylelint": "stylelint '**/*.css'",
+  "lint:css": "stylelint '**/*.css'"
+}
+
   },
   "keywords": [],
   "author": "Dawn Clark",
