@@ -7,7 +7,12 @@
     "start": "node index.js",
     "build": "npm run build",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "lint:css": "stylelint '**/*.css'",
+    "prettify": "prettier --write .",
+    "lint-fix": "eslint . --fix",
+    "gulp": "gulp",
+    "precommit": "npm run lint-fix && npm run prettify"
   },
   "dependencies": {
     "cpx": "^1.5.0",
@@ -19,13 +24,8 @@
     "prettier": "^2.3.2",
     "rimraf": "^4.4.1",
     "stylelint": "^16.6.1",
-    "stylelint-config-standard": "^36.0.1"
+    "stylelint-config-standard": "^36.0.1",
+    "@eslint/config-array": "^0.17.0"
   },
   "devDependencies": {
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^3.4.0",
-    "gulp-eslint": "^6.0.0",
-    "gulp-prettier": "^3.0.0"
-  },
-  "optionalDependencies": {}
-}
+    "
