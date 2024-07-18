@@ -1,3 +1,5 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+
 :root {
   --primary-bg-color: #050a30;
   --secondary-bg-color: #1f0a4d;
@@ -356,3 +358,4 @@ body.dark-mode nav ul li a:hover {
     transition: none;
   }
 }
+
