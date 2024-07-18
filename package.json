@@ -28,4 +28,10 @@
     "@eslint/config-array": "^0.17.0"
   },
   "devDependencies": {
-    "
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "gulp-eslint": "^6.0.0",
+    "gulp-prettier": "^3.0.0"
+  },
+  "optionalDependencies": {}
+}
