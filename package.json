@@ -4,7 +4,10 @@
   "description": "Dawn Clark Stories website",
   "main": "index.js",
   "scripts": {
-    "build": "rimraf build && mkdirp build && cpx '**/*' build --dereference --exclude 'node_modules' --exclude '.git' --exclude '.github' && touch build/.nojekyll",
+  "build": "rimraf build && mkdirp build && cpx '**/*' build && touch build/.nojekyll",
+  // other scripts
+}
+
     "deploy": "gh-pages -d build",
     "test": "jest",
     "lint": "eslint .",
@@ -14,6 +17,32 @@
     "precommit": "npm run lint-fix && npm run prettify",
     "stylelint": "stylelint '**/*.css'",
     "lint:css": "stylelint '**/*.css'"
+  },
+  "keywords": [],
+  "author": "Dawn Clark",
+  "license": "ISC",
+  "dependencies": {
+    "@eslint/config-array": "^0.17.0"
+  },
+  "devDependencies": {
+    "cpx": "^1.2.1",
+    "eslint": "^8.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "gh-pages": "^6.1.1",
+    "gulp": "^5.0.0",
+    "gulp-eslint": "^6.0.0",
+    "gulp-prettier": "^3.0.0",
+    "jest": "^27.0.6",
+    "mkdirp": "^1.0.4",
+    "prettier": "^2.3.2",
+    "rimraf": "^4.4.1",
+    "stylelint": "^16.6.1",
+    "stylelint-config-standard": "^36.0.1"
+  }
+}
+
+
   },
   "keywords": [],
   "author": "Dawn Clark",
