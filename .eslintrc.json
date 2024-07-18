@@ -2,13 +2,16 @@
   "env": {
     "browser": true,
     "es6": true,
-    "node": true, // Enable Node.js globals
-    "jest": true  // Enable Jest globals
+    "node": true,
+    "jest": true
   },
   "extends": ["eslint:recommended", "plugin:prettier/recommended"],
   "parserOptions": {
     "ecmaVersion": 2021,
-    "sourceType": "module"
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "impliedStrict": true
+    }
   },
   "rules": {
     "prettier/prettier": "error",
@@ -24,6 +27,9 @@
     "prefer-template": "error",
     "object-shorthand": "error",
     "max-len": ["error", { "code": 100 }],
-    "complexity": ["error", 10]
+    "complexity": ["error", 10],
+    "no-use-before-define": ["error", { "functions": false, "classes": true, "variables": true }],
+    "eqeqeq": ["error", "always"],
+    "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 0 }]
   }
 }
