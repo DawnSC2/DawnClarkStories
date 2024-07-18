@@ -1,70 +1,70 @@
-name: Build, Deploy, and Lint
+name: Deploy
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
+  workflow_dispatch:
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 20
-
-      - name: Cache Node.js modules
-        uses: actions/cache@v3
-        with:
-          path: ~/.npm
-          key: ${{ runner.OS }}-node-${{ hashFiles('package-lock.json') }}-v2
-          restore-keys: |
-            ${{ runner.OS }}-node-
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Run Stylelint
-        run: npm run lint:css
-
-      - name: Build
-        run: |
-          npm run build
-          touch build/.nojekyll  # Ensure .nojekyll is in the build directory
-
-      - name: Upload artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: build
-          path: ./build
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
-
+    timeout-minutes: 15
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Download artifact
-        uses: actions/download-artifact@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          name: build
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint code
+        run: npm run lint
+
+      - name: Run tests
+        run: npm test
+
+      - name: Build project
+        run: npm run build
+        env:
+          NODE_ENV: production
+
+      - name: Create .nojekyll file
+        run: touch build/.nojekyll
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: ./build
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        id: deployment
+        uses: actions/deploy-pages@v2
+
+  notify:
+    needs: build-and-deploy
+    if: failure()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify on failure
+        uses: slackapi/slack-github-action@v1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+          payload: |
+            {
+              "text": "Deployment failed. Please check the logs.",
+              "blocks": [
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "*Deployment Failed*\nPlease check the logs for more information."
+                  }
+                }
+              ]
+            }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}

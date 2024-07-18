@@ -1,11 +1,11 @@
 :root {
-  --primary-bg-color: #050A30;
-  --secondary-bg-color: #1F0A4D;
-  --accent-color: #FF6EC7;
+  --primary-bg-color: #050a30;
+  --secondary-bg-color: #1f0a4d;
+  --accent-color: #ff6ec7;
   --text-color: #e0e0e0;
-  --link-color: #C996CC;
-  --link-hover-color: #FFC7FF;
-  --focus-color: #FF6EC7;
+  --link-color: #c996cc;
+  --link-hover-color: #ffc7ff;
+  --focus-color: #ff6ec7;
   --header-bg-image: url('images/fantasy-alienplanet.jpg');
   --font-family: 'Roboto', sans-serif;
   --heading-font-family: 'Montserrat', sans-serif;
@@ -44,16 +44,24 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 1px, transparent 1px),
-              radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.15) 1px,
+      transparent 1px
+    ),
+    radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
   background-size: 100px 100px, 50px 50px;
   z-index: -1;
   animation: starfield 100s linear infinite;
 }
 
 @keyframes starfield {
-  from { transform: translateY(0); }
-  to { transform: translateY(-10000px); }
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10000px);
+  }
 }
 
 header.hero-section {
@@ -67,8 +75,12 @@ header.hero-section {
 }
 
 @keyframes fadeOpacity {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 header.hero-section h1 {
@@ -79,8 +91,12 @@ header.hero-section h1 {
 }
 
 @keyframes glow {
-  from { text-shadow: 0 0 10px var(--accent-color); }
-  to { text-shadow: 0 0 20px var(--accent-color); }
+  from {
+    text-shadow: 0 0 10px var(--accent-color);
+  }
+  to {
+    text-shadow: 0 0 20px var(--accent-color);
+  }
 }
 
 header.hero-section p {
@@ -91,7 +107,7 @@ header.hero-section p {
 nav {
   position: sticky;
   top: 0;
-  background-color: #3D2C8D;
+  background-color: #3d2c8d;
   padding: var(--spacing-unit);
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -112,7 +128,8 @@ nav ul li a {
   color: var(--link-color);
   text-decoration: none;
   position: relative;
-  transition: color var(--transition-duration), text-shadow var(--transition-duration);
+  transition: color var(--transition-duration),
+    text-shadow var(--transition-duration);
 }
 
 nav ul li a::after {
@@ -155,7 +172,8 @@ h2 {
   font-family: var(--heading-font-family);
   font-size: 2rem;
   margin-bottom: calc(var(--spacing-unit) * 2);
-  transition: color var(--transition-duration), text-shadow var(--transition-duration);
+  transition: color var(--transition-duration),
+    text-shadow var(--transition-duration);
 }
 
 h2:hover {
@@ -199,7 +217,7 @@ h2:hover {
 }
 
 footer {
-  background-color: #1A1F6E;
+  background-color: #1a1f6e;
   color: var(--text-color);
   text-align: center;
   padding: var(--spacing-unit);
@@ -229,7 +247,7 @@ footer a:hover {
   font-size: 18px;
   border: none;
   outline: none;
-  background-color: #3D2C8D;
+  background-color: #3d2c8d;
   color: white;
   cursor: pointer;
   padding: calc(var(--spacing-unit) * 1.5);
@@ -243,7 +261,11 @@ footer a:hover {
   opacity: 1;
 }
 
-a:focus, button:focus, input:focus, textarea:focus, select:focus {
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
   outline: 2px solid var(--focus-color);
 }
 
@@ -254,7 +276,9 @@ body.dark-mode {
   background-color: var(--primary-bg-color);
 }
 
-body.dark-mode footer a:hover, body.dark-mode h2:hover, body.dark-mode nav ul li a:hover {
+body.dark-mode footer a:hover,
+body.dark-mode h2:hover,
+body.dark-mode nav ul li a:hover {
   text-shadow: 0 0 10px var(--text-color);
 }
 
