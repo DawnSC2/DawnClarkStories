@@ -32,9 +32,30 @@ body {
   background-color: var(--primary-bg-color);
   color: var(--text-color);
   line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
 }
 
-/* Hero Section */
+/* Starfield background animation */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+              radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 100px 100px, 50px 50px;
+  z-index: -1;
+  animation: starfield 100s linear infinite;
+}
+
+@keyframes starfield {
+  from { transform: translateY(0); }
+  to { transform: translateY(-10000px); }
+}
+
 header.hero-section {
   background-image: var(--header-bg-image);
   background-size: cover;
@@ -54,13 +75,19 @@ header.hero-section h1 {
   font-family: var(--heading-font-family);
   font-size: 3rem;
   margin-bottom: var(--spacing-unit);
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px var(--accent-color); }
+  to { text-shadow: 0 0 20px var(--accent-color); }
 }
 
 header.hero-section p {
   font-size: 1.5rem;
+  text-shadow: 0 0 10px var(--accent-color);
 }
 
-/* Navigation */
 nav {
   position: sticky;
   top: 0;
@@ -84,7 +111,26 @@ nav ul li {
 nav ul li a {
   color: var(--link-color);
   text-decoration: none;
+  position: relative;
   transition: color var(--transition-duration), text-shadow var(--transition-duration);
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background: var(--accent-color);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--transition-duration);
+}
+
+nav ul li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 nav ul li a:hover {
@@ -92,7 +138,6 @@ nav ul li a:hover {
   text-shadow: 0 0 10px var(--link-hover-color);
 }
 
-/* Main Content */
 main {
   padding: calc(var(--spacing-unit) * 2);
   background-color: rgba(255, 255, 255, 0.1);
@@ -104,22 +149,6 @@ section {
   padding: calc(var(--spacing-unit) * 2);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
-}
-
-.section {
-  position: relative;
-  padding: 50px 20px;
-}
-
-.section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: inherit;
-  clip-path: polygon(0 0, 100% 0, 100% 15%, 0 100%);
 }
 
 h2 {
@@ -134,10 +163,6 @@ h2:hover {
   text-shadow: 0 0 10px var(--accent-color);
 }
 
-p {
-  margin-bottom: calc(var(--spacing-unit) * 1.5);
-}
-
 .book-cover {
   text-align: center;
   margin-bottom: calc(var(--spacing-unit) * 2);
@@ -147,74 +172,14 @@ p {
   width: 200px;
 }
 
-.space-battle {
-  text-align: center;
-  margin-top: calc(var(--spacing-unit) * 2);
-}
-
-.space-battle img {
-  width: 100%;
-  max-width: 800px;
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-}
-
-.sample-chapter {
-  text-align: center;
-  margin-top: calc(var(--spacing-unit) * 2);
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-form label,
-form input,
-form button {
-  margin: var(--spacing-unit);
-}
-
-/* Character Grid */
-.character-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: calc(var(--spacing-unit) * 2);
-}
-
-.character-bio {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: var(--secondary-bg-color);
-  padding: calc(var(--spacing-unit) * 2);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  transition: transform var(--transition-duration) ease-in-out;
-}
-
-.character-bio:hover {
-  transform: scale(1.05);
-}
-
-.character-bio img {
-  width: 150px;
-  border-radius: var(--border-radius);
-  margin-bottom: var(--spacing-unit);
-}
-
-/* Gallery */
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: var(--spacing-unit);
   justify-content: center;
 }
 
 .gallery-item {
-  width: calc(33% - var(--spacing-unit));
-  position: relative;
   transition: box-shadow var(--transition-duration);
 }
 
@@ -233,15 +198,6 @@ form button {
   transform: scale(1.05);
 }
 
-/* Testimonials */
-.testimonial {
-  background-color: #6A0DAD;
-  padding: var(--spacing-unit);
-  margin-bottom: var(--spacing-unit);
-  border-radius: var(--border-radius);
-}
-
-/* Footer */
 footer {
   background-color: #1A1F6E;
   color: var(--text-color);
@@ -264,11 +220,10 @@ footer a:hover {
   color: var(--accent-color);
 }
 
-/* Back to Top Button */
 #backToTop {
   display: none;
-  position: sticky;
-  bottom: calc(var(--spacing-unit) *bottom: calc(var(--spacing-unit) * 2);
+  position: fixed;
+  bottom: calc(var(--spacing-unit) * 2);
   right: calc(var(--spacing-unit) * 3);
   z-index: 99;
   font-size: 18px;
@@ -288,12 +243,21 @@ footer a:hover {
   opacity: 1;
 }
 
-/* Focus styles for accessibility */
 a:focus, button:focus, input:focus, textarea:focus, select:focus {
   outline: 2px solid var(--focus-color);
 }
 
-/* Responsive styles */
+body.dark-mode {
+  --primary-bg-color: #121212;
+  --secondary-bg-color: #333;
+  --text-color: #ffffff;
+  background-color: var(--primary-bg-color);
+}
+
+body.dark-mode footer a:hover, body.dark-mode h2:hover, body.dark-mode nav ul li a:hover {
+  text-shadow: 0 0 10px var(--text-color);
+}
+
 @media screen and (max-width: 768px) {
   header.hero-section h1 {
     font-size: 2rem;
@@ -343,5 +307,28 @@ a:focus, button:focus, input:focus, textarea:focus, select:focus {
 
   h2 {
     font-size: 2.25rem;
+  }
+}
+
+/* Dark mode toggle button */
+#darkModeToggle {
+  background-color: var(--secondary-bg-color);
+  color: var(--text-color);
+  border: none;
+  padding: var(--spacing-unit);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color var(--transition-duration);
+}
+
+#darkModeToggle:hover {
+  background-color: var(--accent-color);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none;
+    transition: none;
   }
 }
