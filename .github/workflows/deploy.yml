@@ -51,7 +51,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Notify on failure
-        uses: slackapi/slack-github-action@v1
+        uses: slackapi/slack-github-action@v1.23.0
         with:
           payload: |
             {
@@ -67,4 +67,4 @@ jobs:
               ]
             }
         env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_WEBHOOK_URL:
