@@ -11,10 +11,10 @@ jobs:
     timeout-minutes: 15
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
@@ -51,9 +51,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Notify on failure
-        uses: 8398a7/action-slack@v3
+        uses: slackapi/slack-github-action@v1
         with:
-          status: ${{ job.status }}
-          text: Deployment failed. Please check the logs.
+          payload: |
+            {
+              "text": "Deployment failed. Please check the logs.",
+              "blocks": [
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "*Deployment Failed*\nPlease check the logs for more information."
+                  }
+                }
+              ]
+            }
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+
