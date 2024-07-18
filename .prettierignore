@@ -1,3 +1,121 @@
+# Dependencies
 node_modules
-build
+.pnp
+.pnp.js
 
+# Build outputs
+build
+dist
+coverage
+
+# Misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Cache directories
+.cache
+.parcel-cache
+
+# Next.js
+.next
+out
+
+# Nuxt.js
+.nuxt
+
+# Gatsby
+.cache/
+public
+
+# VuePress
+.vuepress/dist
+
+# Serverless
+.serverless/
+
+# FuseBox
+.fusebox/
+
+# DynamoDB Local files
+.dynamodb/
+
+# TernJS
+.tern-port
+
+# TypeScript
+*.tsbuildinfo
+
+# Storybook
+storybook-static
+
+# Generated files
+*.generated.*
+
+# Package files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Markdown files (optional)
+*.md
+
+# SVG files (optional)
+*.svg
+
+# Specific file types
+*.html
+*.xml
+*.json
+
+# CSS preprocessor caches
+.sass-cache
+.less-cache
+
+# IDE/Editor specific files
+.vscode
+.idea
+*.sublime-project
+*.sublime-workspace
+
+# Configuration files
+.eslintrc
+.babelrc
+tsconfig.json
+jest.config.js
+cypress.json
+webpack.config.js
+rollup.config.js
+
+# Docker files
+Dockerfile
+docker-compose.yml
+
+# Auto-generated documentation
+docs/
+
+# Sample document for download
+path/to/sample-document.pdf
+
+# Generated or vendor directories
+vendor/
+generated/
+
+# Specific files
+CHANGELOG.md
+LICENSE
+
+# Minified files
+*.min.js
+*.min.css
+
+# CSS-in-JS libraries
+*.css.js
+*.styled.js
