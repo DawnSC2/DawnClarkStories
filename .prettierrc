@@ -1,11 +1,48 @@
 {
-  "s{
+  "semi": true,
   "singleQuote": true,
   "trailingComma": "all",
   "printWidth": 80,
-  "tabWidth": 2
+  "tabWidth": 2,
+  "bracketSpacing": true,
+  "arrowParens": "always",
+  "endOfLine": "lf",
+  "jsxSingleQuote": false,
+  "quoteProps": "as-needed",
+  "htmlWhitespaceSensitivity": "strict",
+  "proseWrap": "preserve",
+  "embeddedLanguageFormatting": "auto",
+  "overrides": [
+    {
+      "files": "*.json",
+      "options": {
+        "printWidth": 100
+      }
+    },
+    {
+      "files": "*.md",
+      "options": {
+        "proseWrap": "always"
+      }
+    },
+    {
+      "files": "*.yaml",
+      "options": {
+        "printWidth": 100
+      }
+    },
+    {
+      "files": "*.ts",
+      "options": {
+        "parser": "typescript"
+      }
+    },
+    {
+      "files": ["*.styled.js", "*.styled.ts"],
+      "options": {
+        "parser": "styled-components"
+      }
+    }
+  ]
 }
-emi": true,
-  "singleQuote": true,
-  "printWidth": 80
-}
+
