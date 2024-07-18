@@ -18,9 +18,7 @@
   "keywords": [],
   "author": "Dawn Clark",
   "license": "ISC",
-  "dependencies": {
-    "gh-pages": "^5.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "eslint": "^8.0.0",
     "eslint-config-prettier": "^8.3.0",
@@ -29,7 +27,7 @@
     "gulp": "^4.0.2",
     "gulp-eslint": "^6.0.0",
     "gulp-prettier": "^3.0.0",
-    "gh-pages": "^5.0.0",
+    "gh-pages": "^4.0.0",
     "stylelint": "^16.6.1",
     "stylelint-config-standard": "^36.0.1",
     "rimraf": "^4.0.0",
@@ -38,3 +36,4 @@
     "jest": "^27.0.6"
   }
 }
+
