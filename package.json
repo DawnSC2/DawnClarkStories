@@ -8,12 +8,11 @@
     "deploy": "gh-pages -d build",
     "test": "jest",
     "lint": "eslint .",
+    "lint:css": "stylelint '**/*.css'",
     "prettify": "prettier --write .",
     "lint-fix": "eslint . --fix",
     "gulp": "gulp",
-    "precommit": "npm run lint-fix && npm run prettify",
-    "stylelint": "stylelint '**/*.css'",
-    "lint:css": "stylelint '**/*.css'"
+    "precommit": "npm run lint-fix && npm run prettify"
   },
   "keywords": [],
   "author": "Dawn Clark",
@@ -27,7 +26,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
     "prettier": "^2.3.2",
-    "gulp": "^5.0.0",
+    "gulp": "^4.0.2",
     "gh-pages": "^6.1.1",
     "gulp-eslint": "^6.0.0",
     "gulp-prettier": "^3.0.0",
@@ -35,5 +34,6 @@
     "stylelint-config-standard": "^36.0.1",
     "rimraf": "^4.4.1",
     "jest": "^27.0.6",
-    "mkdirp": "^1
-
+    "mkdirp": "^1.0.4"
+  }
+}
