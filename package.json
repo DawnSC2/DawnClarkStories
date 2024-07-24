@@ -14,7 +14,7 @@
     "gulp": "gulp",
     "precommit": "npm run lint-fix && npm run prettify",
     "deploy": "npm run build && gh-pages -d build"
-  },
+  {
   "dependencies": {
     "cpx": "^1.5.0",
     "gh-pages": "^6.1.1",
@@ -22,8 +22,10 @@
     "mkdirp": "^1.0.4",
     "rimraf": "^4.4.1",
     "stylelint": "^16.6.1",
-    "stylelint-config-standard": "^36.0.1"
-  },
+    "stylelint-config-standard": "^36.0.1",
+    "braces": ">=3.0.3"
+  }
+}
   "devDependencies": {
     "eslint": "^8.45.0",
     "eslint-config-prettier": "^8.3.0",
