@@ -14,25 +14,26 @@
     "gulp": "gulp",
     "precommit": "npm run lint-fix && npm run prettify",
     "deploy": "npm run build && gh-pages -d build"
- {
+  },
   "dependencies": {
-    "cpx": "^1.5.0",
-    "gh-pages": "^6.1.1",
-    "gulp": "^4.0.2",
-    "mkdirp": "^1.0.4",
-    "rimraf": "^5.0.0",
-    "stylelint": "^16.6.1",
-    "stylelint-config-standard": "^36.0.1"
+    // Any runtime dependencies would go here
   },
   "devDependencies": {
     "@eslint/js": "^8.45.0",
     "eslint": "^8.45.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^5.0.0",
+    "gulp": "^4.0.2",
     "gulp-eslint": "^6.0.0",
     "gulp-prettier": "^5.0.0",
     "jest": "^29.7.0",
-    "prettier": "^3.0.0"
+    "prettier": "^3.0.0",
+    "stylelint": "^16.6.1",
+    "stylelint-config-standard": "^36.0.1",
+    "cpx": "^1.5.0",
+    "gh-pages": "^6.1.1",
+    "mkdirp": "^1.0.4",
+    "rimraf": "^5.0.0"
   },
   "optionalDependencies": {},
   "engines": {
