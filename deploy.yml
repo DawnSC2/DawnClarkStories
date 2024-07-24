@@ -1,5 +1,4 @@
 name: Build, Deploy, and Lint
-
 on:
   push:
     branches:
@@ -9,16 +8,13 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '20'
-
       - name: Cache Node.js modules
         uses: actions/cache@v3
         with:
@@ -26,43 +22,35 @@ jobs:
           key: ${{ runner.OS }}-node-${{ hashFiles('package-lock.json') }}-v2
           restore-keys: |
             ${{ runner.OS }}-node-
-
       - name: Install dependencies
-        run: npm install
-
+        run: npm ci
       - name: Run Stylelint
         run: npm run lint:css
-
       - name: Build
         run: |
           npm run build
-          touch build/.nojekyll  # Ensure .nojekyll is in the build directory
-
+          touch build/.nojekyll
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
           name: build
-          path: ./build
+          path: build
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
     permissions:
-      contents: read
-      pages: write
-      id-token: write
-
+      contents: write
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-
       - name: Download artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: build
-
+          path: build
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
