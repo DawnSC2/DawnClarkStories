@@ -60,20 +60,10 @@ storybook-static
 *.generated.*
 
 # Package files
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
-
-# Markdown files (optional)
-*.md
-
-# SVG files (optional)
-*.svg
-
-# Specific file types
-*.html
-*.xml
-*.json
+# Consider tracking these for consistency
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
 
 # CSS preprocessor caches
 .sass-cache
@@ -85,19 +75,6 @@ pnpm-lock.yaml
 *.sublime-project
 *.sublime-workspace
 
-# Configuration files
-.eslintrc
-.babelrc
-tsconfig.json
-jest.config.js
-cypress.json
-webpack.config.js
-rollup.config.js
-
-# Docker files
-Dockerfile
-docker-compose.yml
-
 # Auto-generated documentation
 docs/
 
@@ -108,10 +85,6 @@ path/to/sample-document.pdf
 vendor/
 generated/
 
-# Specific files
-CHANGELOG.md
-LICENSE
-
 # Minified files
 *.min.js
 *.min.css
@@ -119,3 +92,27 @@ LICENSE
 # CSS-in-JS libraries
 *.css.js
 *.styled.js
+
+# Specific file types - be cautious with these
+# *.html
+# *.xml
+# *.json
+# *.md
+# *.svg
+
+# Configuration files - consider tracking these
+# .eslintrc
+# .babelrc
+# tsconfig.json
+# jest.config.js
+# cypress.json
+# webpack.config.js
+# rollup.config.js
+
+# Docker files - usually tracked
+# Dockerfile
+# docker-compose.yml
+
+# Usually tracked
+# CHANGELOG.md
+# LICENSE
