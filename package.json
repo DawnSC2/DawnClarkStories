@@ -4,15 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "build": "npm run build",
-    "test": "jest",
-    "lint": "eslint .",
-    "lint:css": "stylelint '**/*.css'",
-    "prettify": "prettier --write .",
-    "lint-fix": "eslint . --fix",
-    "gulp": "gulp",
-    "precommit": "npm run lint-fix && npm run prettify"
+  "start": "node index.js",
+  "build": "your actual build command here",
+  "test": "jest",
+  "lint": "eslint .",
+  "lint:css": "stylelint '**/*.css'",
+  "prettify": "prettier --write .",
+  "lint-fix": "eslint . --fix",
+  "gulp": "gulp",
+  "precommit": "npm run lint-fix && npm run prettify"
+}
   },
   "dependencies": {
     "cpx": "^1.5.0",
