@@ -1,49 +1,39 @@
 # Set default behavior for text files
 * text=auto
-
 # Treat all TypeScript files as text and use LF for line endings
 *.ts text eol=lf
-
 # Treat JavaScript, CSS, and HTML files as text and use LF for line endings
 *.js text eol=lf
 *.css text eol=lf
 *.html text eol=lf
-
 # Treat image files as binary
 *.png binary
 *.jpg binary
 *.gif binary
 *.webp binary
-
+# Treat PDF files as binary
+*.pdf binary
 # Exclude the stylelint directory in node_modules from text handling
 node_modules/stylelint/* -text
-
 # Treat files in the dist and build directories as binary
 dist/* -text
 build/* -text
-
 # Treat YAML and JSON configuration files as text and use LF for line endings
 *.yml text eol=lf
 *.yaml text eol=lf
 *.json text eol=lf
-
 # Treat shell scripts and batch files with appropriate line endings
 *.sh text eol=lf
 *.bat text eol=crlf
-
 # Treat Markdown files as text and use LF for line endings
 *.md text eol=lf
-
 # Treat specific build output files as binary
 *.min.js binary
 *.min.css binary
-
 # Treat specific compression formats as binary
 *.zip binary
 *.gz binary
 *.tar binary
-
 # IDE/Editor specific files
 .editorconfig text eol=lf
 .eslintrc text eol=lf
-
